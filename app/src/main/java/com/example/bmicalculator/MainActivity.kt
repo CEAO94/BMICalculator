@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
@@ -29,9 +30,25 @@ class MainActivity : AppCompatActivity() {
 
         // Set Button function
         result.setOnClickListener {
-            val edWeight: Float = weight.text.toString().toFloat()
-            val edHeight: Float = height.text.toString().toFloat()
-            println(edWeight + edHeight)
+            val typeWeight: String = weight.text.toString()
+            val typeHeight: String = height.text.toString()
+
+
+            if (typeWeight == "" || typeHeight == "")
+            //Empty - show a error message to the user
+            { Snackbar.make (weight, "Please enter a valid input", Snackbar.LENGTH_LONG).show()
+
+            } else {
+            val tWeight = typeWeight.toFloat() //short code line
+            val tHeight: Float = typeHeight.toString().toFloat() //long code line
+
+
+
+            }
+
+
+
+
 
 
         }
