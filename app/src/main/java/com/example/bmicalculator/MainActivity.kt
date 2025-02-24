@@ -29,9 +29,9 @@ class MainActivity : AppCompatActivity() {
 
         // Set Button function
         result.setOnClickListener {
-            val edWeight = weight.text
-            val edHeight = height.text
-            println("Seu peso é " + edHeight)
+            val edWeight: Float = weight.text.toString().toFloat()
+            val edHeight: Float = height.text.toString().toFloat()
+            println(edWeight + edHeight)
 
 
         }
