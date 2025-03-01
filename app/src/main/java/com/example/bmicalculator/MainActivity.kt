@@ -1,8 +1,11 @@
 package com.example.bmicalculator
 
+
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -26,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         val weight = findViewById<TextInputEditText>(R.id.inp_Weight)
         val height = findViewById<TextInputEditText>(R.id.inp_Height)
-        val result = findViewById<Button>(R.id.calc)
+        var result = findViewById<Button>(R.id.calc)
 
         // Set Button function
         result.setOnClickListener {
@@ -36,19 +39,29 @@ class MainActivity : AppCompatActivity() {
 
             if (typeWeight == "" || typeHeight == "")
             //Empty - show a error message to the user
-            { Snackbar.make (weight, "Please enter a valid input", Snackbar.LENGTH_LONG).show()
+            {
+                Snackbar.make(weight, "You must enter a valid value.", Snackbar.LENGTH_LONG).show()
 
             } else {
-            val tWeight = typeWeight.toFloat() //short code line
-            val tHeight: Float = typeHeight.toString().toFloat() //long code line
+                val tWeight: Float = typeWeight.toFloat() //short code line
+                val tHeight: Float = typeHeight.toString().toFloat() //long code line
 
+                val heightBMI: Float = tHeight * tHeight
+                val button = tWeight / heightBMI
+                println(button)
+
+                //Navegate to second screen;
+                //Create the second screen
+                //Transfer information between screens
+
+                // Intent - Android Class
+
+
+                val intent = Intent(this, ResultActivity::class.java)
+                startActivity(intent)
 
 
             }
-
-
-
-
 
 
         }
