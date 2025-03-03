@@ -2,10 +2,9 @@
 This project is a Native Android Application developed using the Kotlin programming language. The main functionality of the app is to calculate the Body Mass Index (BMI). The app takes the user's weight and height as input, calculates the BMI, and provides the result along with the BMI category (underweight, normal weight, overweight, or obese) based on the calculated value. 
 
 ## 📸 Scrennshots 📸
-<img src="https://github.com/user-attachments/assets/808acd8d-eae5-4875-91fd-1b308cea8834" width=200/>
-<img src="https://github.com/user-attachments/assets/4a7ca449-301f-4e5d-956a-cd3e38e7b704" width=200/>
-<img src="https://github.com/user-attachments/assets/413b4270-2556-488c-aaf9-fb9d370aa310" width=200/>
-
+<img src="https://github.com/user-attachments/assets/e81e2a92-45d3-4ff6-b909-c27a7c4768cd" width=200/>
+<img src="https://github.com/user-attachments/assets/7694ae68-f7dd-423c-8708-53cf8b9494e6" width=200/>
+<img src="https://github.com/user-attachments/assets/ed53a1bd-cb45-41dc-80b1-9ef432bc8d48" width=200/>
 
 ### Tecnologias
 - Activity
@@ -14,9 +13,11 @@ This project is a Native Android Application developed using the Kotlin programm
 - ViewGroups
   - LinearLayout
   - ConstraintLayout
+  - TableLayout
 - Views
   - ImageView
   - TextView
+  - TableRow
   - EditText
   - Button
 
